@@ -1,0 +1,76 @@
+.home-hero-section {
+    background: url('../css/images/backgrond.jpg') 
+                no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.home-hero-section h1, .home-hero-section p {
+    margin-bottom: 20px;
+}
+
+.home-hero-section .home-btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+}
+.home-hero-section h1 {
+    color: #FFA500; /* Vibrant Orange */
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Soft glow effect */
+}
+
+/* Highlighted username styling */
+.home-hero-section .home-highlight-name {
+    font-size: 2rem;  /* Larger font */
+    font-weight: bold; /* Bold text */
+    color: #FFD700;    /* Golden Yellow */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Soft glow effect */
+}
+.home-hero-section .home-btn {
+    font-size: 1.2rem;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    background: linear-gradient(45deg, #ff8c00, #ff0080); /* Gradient effect */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4); /* Soft shadow */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.home-hero-section .home-btn:hover {
+    background: linear-gradient(45deg, #ff0080, #ff8c00); /* Reverse gradient */
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 6px 20px rgba(255, 0, 128, 0.5);
+}
+
+/* Add a glowing effect */
+.home-hero-section .home-btn::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50px;
+    background: rgba(255, 140, 0, 0.3);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.home-hero-section .home-btn:hover::after {
+    opacity: 1;
+}
+

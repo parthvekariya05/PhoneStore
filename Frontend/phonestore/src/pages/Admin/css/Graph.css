@@ -1,0 +1,88 @@
+/* Graph Page Styling */
+.graph-container {
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #343a40;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: #23272b;
+    transform: scale(1.05);
+}
+
+/* Title */
+.graph-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Chart Wrapper */
+.chart-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.chart-wrapper:hover {
+    transform: scale(1.02);
+}
+
+/* Chart Heading */
+.chart-heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .graph-container {
+        padding: 15px;
+    }
+
+    .chart-wrapper {
+        padding: 18px;
+    }
+
+    .graph-title {
+        font-size: 22px;
+    }
+
+    .chart-heading {
+        font-size: 18px;
+    }
+
+    .back-btn {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
+

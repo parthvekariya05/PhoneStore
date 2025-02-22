@@ -1,0 +1,159 @@
+/* Sidebar */
+.admin-sidebar {
+  height: 100%;
+  padding: 15px;
+}
+
+.admin-sidebar h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-sidebar ul {
+  padding: 0;
+  list-style: none;
+}
+
+.admin-sidebar .nav-item {
+  margin-bottom: 10px;
+}
+
+.admin-sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  transition: 0.3s;
+}
+
+.admin-sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar .collapse {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Main Content */
+.admin-dashboard {
+  margin-left: 250px; /* Ensure space for sidebar */
+  padding: 20px;
+  width: calc(100% - 250px); /* Adjust width */
+}
+
+/* Dashboard Cards */
+.admin-dashboard .card {
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  padding: 0px;
+}
+
+.admin-dashboard .card:hover {
+  transform: translateY(-5px);
+}
+
+.admin-dashboard .card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.admin-dashboard .card h3 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Card Icons */
+.card-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Color-coded Cards */
+/* Color-coded Cards (Lighter Shades) */
+/* Color-coded Cards with Border */
+.card.bg-primary {
+  background-color: #033f7b !important; /* Light blue */
+  border: 2px solid #4500b4 !important; /* Border color */
+}
+
+.card.bg-success {
+  background-color: #03a64c !important; /* Light green */
+  border: 2px solid #004911 !important; /* Border color */
+}
+
+.card.bg-warning {
+  background-color: #e8b829 !important; /* Light yellow */
+  border: 2px solid #8a7a00 !important; /* Border color */
+}
+
+.card.bg-danger {
+  background-color: #d75454 !important; /* Light red */
+  border: 2px solid #88010f !important; /* Border color */
+}
+
+
+
+/* Graph Section */
+.graph-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Responsive Graph */
+@media (max-width: 768px) {
+  .graph-container {
+    padding: 15px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .admin-dashboard {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* In Admin.css */
+
+/* Style for the cards to add background icons */
+.admin-card {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent; /* Ensuring background color isn't overridden */
+}
+
+.admin-card .card-icon-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1; /* Adjust the opacity to make the icon faint */
+  font-size: 5rem; /* Adjust size to fit well in the background */
+  z-index: 0; /* Ensure it stays in the background */
+}
+
+.admin-card .card-body {
+  z-index: 1; /* Ensure content stays on top of the icon */
+}
+
+.card-body i.card-icon {
+  z-index: 2; /* Ensure the icon is above the background icon */
+}

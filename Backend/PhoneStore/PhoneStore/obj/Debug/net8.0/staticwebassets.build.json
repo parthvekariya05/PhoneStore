@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "9fixKRnKZtx+KeOhthAyhql0ssxlaCC6XIlCp0V/8p8=",
+  "Source": "PhoneStore",
+  "BasePath": "_content/PhoneStore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
