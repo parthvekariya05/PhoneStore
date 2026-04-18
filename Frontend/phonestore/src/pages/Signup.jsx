@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-import loginimg from "./css/images/Login.jpg";
+import loginImg from "./css/images/Login.jpg";
 import { useAuth } from "../store/auth";
 
 const SignUp = () => {
@@ -118,7 +118,7 @@ const SignUp = () => {
                     </div>
 
                     <div className="col-md-6 d-none d-md-block">
-                        <img src={loginimg} className="img-fluid" alt="Mobile Shop" />
+                        <img src={loginImg} className="img-fluid" alt="Mobile Shop" />
                     </div>
                 </div>
             </div>
