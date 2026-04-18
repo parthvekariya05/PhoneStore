@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-import loginImg from "./css/images/Login.jpg";
+import loginImg from "./css/images/login.jpg";
 import { useAuth } from "../store/auth";
 
 const SignUp = () => {
