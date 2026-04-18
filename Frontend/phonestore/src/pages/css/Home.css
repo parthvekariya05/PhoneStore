@@ -74,3 +74,74 @@
     opacity: 1;
 }
 
+/* Animated Background */
+/* @keyframes backgroundAnimation {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.home-hero-section {
+    background: url('../css/images/backgrond.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    animation: backgroundAnimation 10s infinite alternate ease-in-out;
+} */
+
+/* Animated Text */
+/* @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-hero-section h1, .home-hero-section p {
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.home-hero-section .home-btn {
+    font-size: 1.2rem;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff8c00, #ff0080);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 2s ease-out;
+}
+
+
+.home-hero-section .home-btn:hover {
+    background: linear-gradient(45deg, #ff0080, #ff8c00);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 128, 0.5);
+}
+
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 0, 128, 0.7); }
+    100% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.5); }
+}
+
+.home-hero-section .home-btn:hover {
+    animation: glow 1.5s infinite alternate;
+} */

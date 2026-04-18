@@ -281,7 +281,7 @@ END
 
 CREATE   PROCEDURE [dbo].[PR_PhoneDetail_Insert]
     @PhoneName NVARCHAR(100),
-    @PhoneImage NVARCHAR(10),
+    @PhoneImage NVARCHAR(500),
     @Price INT,	
 	@Phone_BrandID INT,
     @Phone_StorageID INT

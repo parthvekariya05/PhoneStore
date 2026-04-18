@@ -164,7 +164,7 @@ namespace PhoneStore.Data.PhoneDetail
         }
         #endregion
 
-        #region GetByPhoneID
+        #region GetByBrandID
         public List<Phone_BrandDropDownModel> GetByBrandID(int Phone_BrandID)
         {
             var phone = new List<Phone_BrandDropDownModel>();

@@ -159,7 +159,7 @@ const AddEditMobile = () => {
 
                 if (response.ok) {
                     toast.warning(responseData.message)
-                    navigate("/admin")
+                    navigate("/admin/getallmobile")
                 }
             } else {
                 const { PhoneId, ...rest } = formData;
@@ -174,7 +174,7 @@ const AddEditMobile = () => {
 
                 if (response.ok) {
                     toast.success(responseData.message)
-                    navigate("/admin")
+                    navigate("/admin/getallmobile")
                 }
             }
         }

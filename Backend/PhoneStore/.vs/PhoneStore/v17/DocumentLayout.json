@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "E:\\Study\\Sem-6\\PhoneStore\\Backend\\PhoneStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75F4FCBF-E3FC-48A7-8C8E-D31A848C1FE3}|PhoneStore\\PhoneStore.csproj|e:\\study\\sem-6\\phonestore\\backend\\phonestore\\phonestore\\controllers\\phonedetail\\phonedetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75F4FCBF-E3FC-48A7-8C8E-D31A848C1FE3}|PhoneStore\\PhoneStore.csproj|solutionrelative:phonestore\\controllers\\phonedetail\\phonedetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{75F4FCBF-E3FC-48A7-8C8E-D31A848C1FE3}|PhoneStore\\PhoneStore.csproj|e:\\study\\sem-6\\phonestore\\backend\\phonestore\\phonestore\\data\\phonedetail\\phonedetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75F4FCBF-E3FC-48A7-8C8E-D31A848C1FE3}|PhoneStore\\PhoneStore.csproj|solutionrelative:phonestore\\data\\phonedetail\\phonedetailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75F4FCBF-E3FC-48A7-8C8E-D31A848C1FE3}|PhoneStore\\PhoneStore.csproj|e:\\study\\sem-6\\phonestore\\backend\\phonestore\\phonestore\\model\\phonedetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75F4FCBF-E3FC-48A7-8C8E-D31A848C1FE3}|PhoneStore\\PhoneStore.csproj|solutionrelative:phonestore\\model\\phonedetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PhoneDetailModel.cs",
-              "DocumentMoniker": "E:\\Study\\Sem-6\\PhoneStore\\Backend\\PhoneStore\\PhoneStore\\Model\\PhoneDetailModel.cs",
-              "RelativeDocumentMoniker": "PhoneStore\\Model\\PhoneDetailModel.cs",
-              "ToolTip": "E:\\Study\\Sem-6\\PhoneStore\\Backend\\PhoneStore\\PhoneStore\\Model\\PhoneDetailModel.cs",
-              "RelativeToolTip": "PhoneStore\\Model\\PhoneDetailModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T15:25:15.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PhoneDetailRepository.cs",
               "DocumentMoniker": "E:\\Study\\Sem-6\\PhoneStore\\Backend\\PhoneStore\\PhoneStore\\Data\\PhoneDetail\\PhoneDetailRepository.cs",
               "RelativeDocumentMoniker": "PhoneStore\\Data\\PhoneDetail\\PhoneDetailRepository.cs",
               "ToolTip": "E:\\Study\\Sem-6\\PhoneStore\\Backend\\PhoneStore\\PhoneStore\\Data\\PhoneDetail\\PhoneDetailRepository.cs",
               "RelativeToolTip": "PhoneStore\\Data\\PhoneDetail\\PhoneDetailRepository.cs",
-              "ViewState": "AgIAAGAAAADYZ2ZmZmYVwKYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAA3jIzMzPzv4sAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T15:20:04.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PhoneDetailController.cs",
-              "DocumentMoniker": "E:\\Study\\Sem-6\\PhoneStore\\Backend\\PhoneStore\\PhoneStore\\Controllers\\PhoneDetail\\PhoneDetailController.cs",
-              "RelativeDocumentMoniker": "PhoneStore\\Controllers\\PhoneDetail\\PhoneDetailController.cs",
-              "ToolTip": "E:\\Study\\Sem-6\\PhoneStore\\Backend\\PhoneStore\\PhoneStore\\Controllers\\PhoneDetail\\PhoneDetailController.cs",
-              "RelativeToolTip": "PhoneStore\\Controllers\\PhoneDetail\\PhoneDetailController.cs",
-              "ViewState": "AgIAAFUAAABAZmZmZmYuwG8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T15:22:02.093Z",
+              "WhenOpened": "2026-04-18T05:29:49.995Z",
               "EditorCaption": ""
             }
           ]

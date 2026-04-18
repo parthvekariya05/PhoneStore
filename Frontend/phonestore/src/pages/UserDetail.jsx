@@ -29,8 +29,8 @@ const UserDetail = () => {
     }, [logedInUser]);
 
     if (!logedInUser) {
-        navigate("/login");  // Redirect to login if not logged in
-        return null;  // Don't render anything if redirected
+        navigate("/login");  
+        return null;  
     }
 
     const handleUpdateClick = () => {
@@ -43,9 +43,9 @@ const UserDetail = () => {
         // Create updated user data
         const updatedUserData = {
             userID: logedInUser.userID,
-            userName: logedInUser.userName, // Updated userName
-            password: logedInUser.password, // Updated password
-            emailAddress: logedInUser.emailAddress, // Updated email
+            userName: logedInUser.userName, 
+            password: logedInUser.password,
+            emailAddress: logedInUser.emailAddress, 
         };
 
         fetch(`https://localhost:44390/api/User/UserUpdate/${logedInUser.userID}`, {

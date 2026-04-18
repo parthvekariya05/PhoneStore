@@ -159,11 +159,6 @@ E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\PhoneSt
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\PhoneStore.MvcApplicationPartsAssemblyInfo.cache
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets.build.json
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets.development.json
-E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets\msbuild.PhoneStore.Microsoft.AspNetCore.StaticWebAssets.props
-E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets\msbuild.build.PhoneStore.props
-E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PhoneStore.props
-E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PhoneStore.props
-E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets.pack.json
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\scopedcss\bundle\PhoneStore.styles.css
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\PhoneStore.csproj.Up2Date
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\PhoneStore.dll
@@ -176,6 +171,11 @@ E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\bin\Debug\net8.0\FluentV
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\bin\Debug\net8.0\PhoneStore.staticwebassets.endpoints.json
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets\msbuild.PhoneStore.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\PhoneStore.sourcelink.json
+E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\rjimswa.dswa.cache.json
+E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+E:\Study\Sem-6\PhoneStore\Backend\PhoneStore\PhoneStore\obj\Debug\net8.0\staticwebassets.build.json.cache
