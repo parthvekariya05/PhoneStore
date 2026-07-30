@@ -1,51 +1,216 @@
-body {
-    background-color: #f4f4f9;
-    font-family: 'Arial', sans-serif;
-    color: #343a40;
+.mid-wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Card Styles */
-.mobileid-card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;  
+.mid-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: 1px solid #d0d5dd;
+    border-radius: 999px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #344054;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: background 0.15s, border-color 0.15s;
 }
 
-.mobileid-card-horizontal {
+.mid-back-btn:hover {
+    background: #f2f4f7;
+    border-color: #a3aab8;
+}
+
+/* ─── Card ───────────────────────────────────────────── */
+.mid-card {
     display: flex;
     align-items: center;
+    gap: 2.5rem;
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+/* ─── Image ──────────────────────────────────────────── */
+.mid-img-wrap {
+    flex-shrink: 0;
+    width: 220px;
+    height: 220px;
+    background: #f9fafb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
 }
 
-.mobileid-card-img {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
+.mid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ─── Body ───────────────────────────────────────────── */
+.mid-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mid-brand {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6a5ae0;
+}
+
+.mid-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #101828;
+    margin: 0;
+    line-height: 1.25;
+}
+
+/* ─── Specs ──────────────────────────────────────────── */
+.mid-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid #eaecf0;
     border-radius: 10px;
-    margin-right: 20px;
+    overflow: hidden;
+    margin-top: 6px;
 }
 
-.mobileid-card-title {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #212529;
+.mid-spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    font-size: 14px;
 }
 
-.mobileid-card-text {
-    font-size: 1rem;
-    color: #6c757d;
+.mid-spec-row + .mid-spec-row {
+    border-top: 1px solid #eaecf0;
 }
 
-.mobileid-btn-primary {
-    background-color: #0d6efd;
+.mid-spec-label {
+    color: #667085;
+    font-weight: 400;
+}
+
+.mid-spec-value {
+    color: #101828;
+    font-weight: 500;
+}
+
+.mid-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #101828;
+}
+
+/* ─── Button ─────────────────────────────────────────── */
+.mid-proceed-btn {
+    margin-top: 8px;
+    width: 100%;
+    padding: 12px;
+    background: #6a5ae0;
+    color: #ffffff;
     border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: inherit;
 }
 
-.mobileid-btn-primary:hover {
-    background-color: #084298;
+.mid-proceed-btn:hover {
+    background: #4f3fc7;
+}
+
+/* ─── Error ──────────────────────────────────────────── */
+.mid-error {
+    text-align: center;
+    color: #b42318;
+    font-size: 14px;
+    padding: 16px;
+    background: #fef3f2;
+    border-radius: 10px;
+    border: 1px solid #fecdca;
+}
+
+/* ─── Skeleton ───────────────────────────────────────── */
+@keyframes mid-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+}
+
+.mid-skeleton {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 16px;
+    padding: 2rem;
+    animation: mid-pulse 1.4s ease-in-out infinite;
+}
+
+.mid-sk-img {
+    flex-shrink: 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    background: #f2f4f7;
+}
+
+.mid-sk-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mid-sk-line {
+    height: 14px;
+    border-radius: 6px;
+    background: #f2f4f7;
+}
+
+.mid-sk-btn {
+    height: 42px;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 600px) {
+    .mid-card,
+    .mid-skeleton {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .mid-img-wrap,
+    .mid-sk-img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .mid-name {
+        font-size: 20px;
+    }
 }

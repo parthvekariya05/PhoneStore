@@ -1,141 +1,142 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";  // Changed from 'Navigate' to 'useNavigate' for redirection
-import "./css/UserDetail.css"; // Optional: Add custom styles if necessary
+import { Link, useNavigate } from "react-router-dom";
+import "./css/UserDetail.css";
 
 const UserDetail = () => {
-    const [logedInUser, setLogedInUser] = useState(JSON.parse(localStorage.getItem('userData')));
-    const [data, setData] = useState(null);  // Set initial value as null
-    const [error, setError] = useState("");  // State to handle errors
-    const [isUpdating, setIsUpdating] = useState(false); // To handle the update state
-    const navigate = useNavigate();  // For navigation
+    const navigate = useNavigate();
+    const [logedInUser, setLogedInUser] = useState(
+        JSON.parse(localStorage.getItem("userData"))
+    );
+    const [isUpdating, setIsUpdating] = useState(false);
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
 
     useEffect(() => {
-        if (!logedInUser) return;
+        if (!logedInUser) navigate("/login");
+    }, [logedInUser, navigate]);
 
-        // Fetching user details from the API
-        fetch(`https://localhost:44390/api/User/GetByUserID/${logedInUser.userID}`, {
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        })
-        .then((res) => res.json())
-        .then((res) => {
-            setData(res);
-        })
-        .catch((error) => {
-            console.error("Error fetching user details:", error);
-            setError("Failed to load user details.");
-        });
-    }, [logedInUser]);
+    if (!logedInUser) return null;
 
-    if (!logedInUser) {
-        navigate("/login");  
-        return null;  
-    }
-
-    const handleUpdateClick = () => {
-        setIsUpdating(true);
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setLogedInUser((prev) => ({ ...prev, [name]: value }));
     };
 
     const handleUpdateSubmit = (e) => {
         e.preventDefault();
-
-        // Create updated user data
+        setError("");
+        setSuccess("");
         const updatedUserData = {
             userID: logedInUser.userID,
-            userName: logedInUser.userName, 
+            userName: logedInUser.userName,
             password: logedInUser.password,
-            emailAddress: logedInUser.emailAddress, 
+            emailAddress: logedInUser.emailAddress,
         };
 
         fetch(`https://localhost:44390/api/User/UserUpdate/${logedInUser.userID}`, {
             method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedUserData),
         })
-        .then((res) => res.json())
-        .then((res) => {
-            // Handle success response
-            setIsUpdating(false);
-            setLogedInUser(updatedUserData); // Update the local state with the new data
-            alert("User updated successfully!");
-        })
-        .catch((error) => {
-            console.error("Error updating user details:", error);
-            setError("Failed to update user details.");
-            setIsUpdating(false);
-        });
-    };
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setLogedInUser((prevState) => ({
-            ...prevState,
-            [name]: value, // Update the corresponding field in the user object
-        }));
+            .then((res) => res.json())
+            .then(() => {
+                localStorage.setItem("userData", JSON.stringify(updatedUserData));
+                setLogedInUser(updatedUserData);
+                setIsUpdating(false);
+                setSuccess("Profile updated successfully.");
+            })
+            .catch(() => {
+                setError("Failed to update user details.");
+            });
     };
 
     return (
-        <div className="user-details-container my-5 user-details-brgin">
-            <Link className="btn btn-dark" to="/getmobile">Back</Link>
-            <h1 className="user-details-h1 text-center mb-4">User Details</h1>
+        <div className="ud-wrapper">
+            <Link to="/getmobile" className="ud-back-btn">← Back</Link>
 
-            {error && <p className="user-details-p text-danger text-center">{error}</p>}
-
-            {logedInUser ? (
-                <div className="user-details-card">
-                    <h3>{logedInUser.userName}</h3>
-                    <p className="user-details-p"><strong>Password:</strong> {logedInUser.password}</p>
-                    <p className="user-details-p"><strong>Email:</strong> {logedInUser.emailAddress}</p>
-
-                    {/* Update Button */}
-                    <button className="btn btn-primary" onClick={handleUpdateClick}>Update</button>
-
-                    {/* Show Update Form if updating */}
-                    {isUpdating && (
-                        <form onSubmit={handleUpdateSubmit}>
-                            <div>
-                                <label htmlFor="userName">User Name:</label>
-                                <input
-                                    type="text"
-                                    id="userName"
-                                    name="userName"  // Bind to 'userName'
-                                    value={logedInUser.userName}  // Bind to state
-                                    onChange={handleInputChange}  // Handle changes
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="password">Password:</label>
-                                <input
-                                    type="password"
-                                    id="password"
-                                    name="password"  // Bind to 'password'
-                                    value={logedInUser.password}  // Bind to state
-                                    onChange={handleInputChange}  // Handle changes
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="email">Email:</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="emailAddress"  // Bind to 'emailAddress'
-                                    value={logedInUser.emailAddress}  // Bind to state
-                                    onChange={handleInputChange}  // Handle changes
-                                    required
-                                />
-                            </div>
-                            <button type="submit" className="btn btn-success">Submit</button>
-                        </form>
-                    )}
+            <div className="ud-card">
+                <div className="ud-card-header">
+                    <div className="ud-avatar">
+                        {logedInUser.userName?.charAt(0).toUpperCase()}
+                    </div>
+                    <div>
+                        <h2 className="ud-name">{logedInUser.userName}</h2>
+                        <p className="ud-email-sub">{logedInUser.emailAddress}</p>
+                    </div>
                 </div>
-            ) : (
-                <p className="user-details-p text-center">Loading user details...</p>
-            )}
+
+                <div className="ud-divider"></div>
+
+                {error && <div className="ud-error">{error}</div>}
+                {success && <div className="ud-success">{success}</div>}
+
+                {!isUpdating ? (
+                    <div className="ud-fields">
+                        <div className="ud-field">
+                            <span className="ud-field-label">Username</span>
+                            <span className="ud-field-value">{logedInUser.userName}</span>
+                        </div>
+                        <div className="ud-field">
+                            <span className="ud-field-label">Email</span>
+                            <span className="ud-field-value">{logedInUser.emailAddress}</span>
+                        </div>
+                        <div className="ud-field">
+                            <span className="ud-field-label">Password</span>
+                            <span className="ud-field-value">{"•".repeat(8)}</span>
+                        </div>
+                        <button className="ud-edit-btn" onClick={() => setIsUpdating(true)}>
+                            Edit Profile
+                        </button>
+                    </div>
+                ) : (
+                    <form className="ud-form" onSubmit={handleUpdateSubmit}>
+                        <div className="ud-form-group">
+                            <label className="ud-form-label" htmlFor="userName">Username</label>
+                            <input
+                                className="ud-form-input"
+                                type="text"
+                                id="userName"
+                                name="userName"
+                                value={logedInUser.userName}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="ud-form-group">
+                            <label className="ud-form-label" htmlFor="emailAddress">Email</label>
+                            <input
+                                className="ud-form-input"
+                                type="email"
+                                id="emailAddress"
+                                name="emailAddress"
+                                value={logedInUser.emailAddress}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="ud-form-group">
+                            <label className="ud-form-label" htmlFor="password">Password</label>
+                            <input
+                                className="ud-form-input"
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={logedInUser.password}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="ud-form-actions">
+                            <button type="button" className="ud-cancel-btn" onClick={() => setIsUpdating(false)}>
+                                Cancel
+                            </button>
+                            <button type="submit" className="ud-save-btn">
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                )}
+            </div>
         </div>
     );
 };

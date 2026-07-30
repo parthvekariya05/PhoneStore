@@ -1,0 +1,140 @@
+.bill-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.bill-card {
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.bill-header {
+    padding: 1.5rem 1.75rem 1.25rem;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.bill-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #101828;
+    margin: 0 0 4px;
+}
+
+.bill-subtitle {
+    font-size: 13px;
+    color: #667085;
+    margin: 0;
+}
+
+.bill-body {
+    padding: 1.5rem 1.75rem;
+}
+
+.bill-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.bill-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.bill-label {
+    font-size: 13px;
+    color: #667085;
+    font-weight: 400;
+    flex-shrink: 0;
+}
+
+.bill-value {
+    font-size: 14px;
+    color: #101828;
+    font-weight: 500;
+    text-align: right;
+}
+
+.bill-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.bill-divider {
+    height: 1px;
+    background: #eaecf0;
+    margin: 1.25rem 0;
+}
+
+.bill-payment-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bill-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #101828;
+    background: #ffffff;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.bill-select:focus {
+    border-color: #6a5ae0;
+    box-shadow: 0 0 0 3px rgba(106, 90, 224, 0.1);
+}
+
+.bill-footer {
+    padding: 1.25rem 1.75rem;
+    border-top: 1px solid #eaecf0;
+    background: #f9fafb;
+}
+
+.bill-btn {
+    width: 100%;
+    padding: 12px;
+    background: #6a5ae0;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+}
+
+.bill-btn:hover:not(:disabled) {
+    background: #4f3fc7;
+}
+
+.bill-btn:disabled {
+    background: #c4b5fd;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .bill-wrapper {
+        padding: 1rem;
+    }
+    .bill-header,
+    .bill-body,
+    .bill-footer {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}

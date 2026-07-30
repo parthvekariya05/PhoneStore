@@ -1,102 +1,304 @@
-General Styles
-.getmobile-body-bg {
-    background-color: #f8f9fa;    
+/* ─── Wrapper ─────────────────────────────────────────── */
+.gm-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 50%, #f0fdf4 100%);
 }
 
-/* Card Styling */
-.getmobile-phone-card {
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+/* ─── Top Nav ─────────────────────────────────────────── */
+.gm-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 }
-.getmobile-phone-card {
+
+.gm-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid #d0d5dd;
+    font-size: 13px;
+    font-weight: 500;
+    color: #344054;
+    text-decoration: none;
+    background: #ffffff;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.gm-nav-pill:hover {
+    background: #f5f3ff;
+    border-color: #c4b5fd;
+    color: #6a5ae0;
+    text-decoration: none;
+}
+
+/* ─── Header ─────────────────────────────────────────── */
+.gm-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.gm-title {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6a5ae0, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 6px;
+}
+
+.gm-subtitle {
+    font-size: 14px;
+    color: #667085;
+    margin: 0;
+}
+
+/* ─── Search ─────────────────────────────────────────── */
+.gm-search-wrap {
+    position: relative;
+    max-width: 440px;
+    margin: 0 auto 1.25rem;
+}
+
+.gm-search-icon {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.gm-search-input {
+    width: 100%;
+    padding: 12px 40px 12px 42px;
+    border: 1.5px solid #e0d9ff;
+    border-radius: 999px;
+    font-size: 15px;
+    color: #101828;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(106, 90, 224, 0.08);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.gm-search-input:focus {
+    border-color: #6a5ae0;
+    box-shadow: 0 0 0 3px rgba(106, 90, 224, 0.12);
+}
+
+.gm-search-clear {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #667085;
+    cursor: pointer;
+}
+
+.gm-search-clear:hover {
+    color: #101828;
+}
+
+/* ─── Count ──────────────────────────────────────────── */
+.gm-count {
+    font-size: 13px;
+    color: #667085;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+/* ─── Error ──────────────────────────────────────────── */
+.gm-error {
+    text-align: center;
+    color: #b42318;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    background: #fef3f2;
+    border-radius: 8px;
+    border: 1px solid #fecdca;
+}
+
+/* ─── Grid ───────────────────────────────────────────── */
+.gm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 16px;
+}
+
+/* ─── Card ───────────────────────────────────────────── */
+.gm-card {
+    background: #ffffff;
+    border: 1px solid #f0ebff;
+    border-radius: 14px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(106, 90, 224, 0.07);
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
 }
 
-
-.getmobile-phone-card:hover {
-    transform: scale(1.05);
+.gm-card:hover {
+    border-color: #c4b5fd;
+    box-shadow: 0 8px 28px rgba(106, 90, 224, 0.15);
+    transform: translateY(-4px);
 }
 
-
-
-/* Text Styling */
-.getmobile-phone-title {
-    color: #343a40;
-    font-weight: 600;
-    margin-left: 15px;
-}
-
-.getmobile-phone-price {
-    color: #6c757d;
-    margin-left: 15px;
-}
-
-/* Button Styling */
-.getmobile-buy-btn {
-    background-color: #007bff;
-    border: none;
-}
-
-.getmobile-buy-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Footer Styling */
-.getmobile-footer-section {
-    background-color: #343a40;
-    color: #ffffff;
-}
-
-.getmobile-order-history {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    color: #007bff; /* Bootstrap primary color */
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    background-color: #f8f9fa; /* Light gray background */
-    border: 2px solid #007bff;
-    transition: all 0.3s ease-in-out;
-}
-
-.getmobile-order-history:hover {
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-}
-
-/* Search Bar Styling */
-.search-container {
+.gm-card-img-wrap {
+    background: linear-gradient(145deg, #f5f3ff, #eff6ff);
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    aspect-ratio: 1;
+    padding: 20px;
 }
 
-.getmobile-search-input {
+.gm-card-img {
     width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border: 2px solid #007bff;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gm-card-body {
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 4px;
+}
+
+.gm-card-brand {
+    display: inline-block;
+    background: #f0ebff;
+    color: #6a5ae0;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.gm-card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #101828;
+    margin: 6px 0 0;
+    line-height: 1.3;
+}
+
+.gm-card-price {
     font-size: 16px;
-    outline: none;
+    font-weight: 600;
+    color: #101828;
+    margin: 6px 0 0;
 }
 
-.getmobile-search-input:focus {
-    border-color: #0056b3;
+/* ─── Buy Button ─────────────────────────────────────── */
+.gm-buy-btn {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #6a5ae0, #4f46e5);
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 11px;
+    margin-top: 12px;
+    letter-spacing: 0.01em;
+    transition: background 0.15s, box-shadow 0.15s;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .getmobile-search-input {
-        width: 90%;
+.gm-buy-btn:hover {
+    background: linear-gradient(135deg, #4f3fc7, #3730a3);
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(106, 90, 224, 0.35);
+}
+
+/* ─── Empty State ────────────────────────────────────── */
+.gm-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #667085;
+    font-size: 14px;
+}
+
+.gm-empty-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+/* ─── Skeleton ───────────────────────────────────────── */
+@keyframes gm-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+}
+
+.gm-skeleton {
+    background: #ffffff;
+    border: 1px solid #f0ebff;
+    border-radius: 14px;
+    overflow: hidden;
+    animation: gm-pulse 1.4s ease-in-out infinite;
+}
+
+.gm-sk-img {
+    aspect-ratio: 1;
+    background: linear-gradient(145deg, #f5f3ff, #eff6ff);
+}
+
+.gm-sk-body {
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gm-sk-line {
+    height: 12px;
+    border-radius: 6px;
+    background: #f2f4f7;
+}
+
+.gm-sk-btn {
+    height: 36px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 600px) {
+    .gm-wrapper {
+        padding: 1.25rem 1rem;
+    }
+    .gm-title {
+        font-size: 24px;
+    }
+    .gm-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
     }
 }
 
-
-
-
+.gm-admin-pill {
+    background: linear-gradient(135deg, #7b2ff7, #a855f7);
+    color: #fff;
+    cursor: default;
+}

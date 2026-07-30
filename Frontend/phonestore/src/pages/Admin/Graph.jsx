@@ -1,89 +1,3 @@
-// import { useLocation, Link } from "react-router-dom";
-// import { 
-//     BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, 
-//     PieChart, Pie, Cell, 
-//     LineChart, Line, 
-//     RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis
-// } from "recharts";
-// import "./css/Graph.css";
-
-// const Graph = () => {
-//     const location = useLocation();
-//     const counts = location.state?.counts || { PhoneCount: 0, UserCount: 0, BillCount: 0, ContactCount: 0 };
-
-//     const chartData = [
-//         { name: "Products", total: counts.PhoneCount },
-//         { name: "Users", total: counts.UserCount },
-//         { name: "Orders", total: counts.BillCount },
-//         { name: "Contacts", total: counts.ContactCount }
-//     ];
-
-//     const COLORS = ["#007bff", "#28a745", "#ffc107", "#dc3545"];
-
-//     return (
-//         <div className="graph-container">            
-//             <Link className="btn btn-dark" to="/admin">Back</Link>
-//             <h3 className="graph-title">Dashboard Overview</h3>
-
-//             <div className="chart-wrapper">
-//                 <h4 className="chart-heading">Total Counts</h4>
-//                 <ResponsiveContainer width="100%" height={300}>
-//                     <BarChart data={chartData}>
-//                         <XAxis dataKey="name" />
-//                         <YAxis />
-//                         <Tooltip cursor={{ fill: "rgba(0,0,0,0.1)" }} />
-//                         <Legend />
-//                         <Bar dataKey="total" fill="#007bff" barSize={50} radius={[10, 10, 0, 0]} />
-//                     </BarChart>
-//                 </ResponsiveContainer>
-//             </div>
-
-//             <div className="chart-wrapper">
-//                 <h4 className="chart-heading">Data Distribution</h4>
-//                 <ResponsiveContainer width="100%" height={300}>
-//                     <PieChart>
-//                         <Pie data={chartData} dataKey="total" nameKey="name" cx="50%" cy="50%" outerRadius={100} label>
-//                             {chartData.map((entry, index) => (
-//                                 <Cell key={`cell-${index}`} fill={COLORS[index]} />
-//                             ))}
-//                         </Pie>
-//                         <Tooltip />
-//                         <Legend />
-//                     </PieChart>
-//                 </ResponsiveContainer>
-//             </div>
-
-//             <div className="chart-wrapper">
-//                 <h4 className="chart-heading">Trend Over Time</h4>
-//                 <ResponsiveContainer width="100%" height={300}>
-//                     <LineChart data={chartData}>
-//                         <XAxis dataKey="name" />
-//                         <YAxis />
-//                         <Tooltip />
-//                         <Legend />
-//                         <Line type="monotone" dataKey="total" stroke="#28a745" strokeWidth={3} />
-//                     </LineChart>
-//                 </ResponsiveContainer>
-//             </div>
-
-//             <div className="chart-wrapper">
-//                 <h4 className="chart-heading">Radar View</h4>
-//                 <ResponsiveContainer width="100%" height={300}>
-//                     <RadarChart data={chartData} outerRadius={90}>
-//                         <PolarGrid />
-//                         <PolarAngleAxis dataKey="name" />
-//                         <PolarRadiusAxis />
-//                         <Radar dataKey="total" stroke="#ffc107" fill="#ffc107" fillOpacity={0.6} />
-//                         <Tooltip />
-//                     </RadarChart>
-//                 </ResponsiveContainer>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Graph;
-
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import {
@@ -92,6 +6,7 @@ import {
     LineChart, Line,
     RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis
 } from "recharts";
+import { FaArrowLeft, FaChartLine, FaChevronLeft, FaChevronRight, FaMobileAlt, FaUsers, FaFileInvoiceDollar, FaAddressBook } from "react-icons/fa";
 import "./css/Graph.css";
 
 const Graph = () => {
@@ -105,19 +20,26 @@ const Graph = () => {
         { name: "Contacts", total: counts.ContactCount }
     ];
 
-    const COLORS = ["#007bff", "#28a745", "#ffc107", "#dc3545"];
+    const COLORS = ["#7b2ff7", "#a855f7", "#ffb020", "#e94560"];
     const [currentChart, setCurrentChart] = useState(0);
+
+    const statCards = [
+        { label: "Products", value: counts.PhoneCount, icon: <FaMobileAlt /> },
+        { label: "Users", value: counts.UserCount, icon: <FaUsers /> },
+        { label: "Orders", value: counts.BillCount, icon: <FaFileInvoiceDollar /> },
+        { label: "Contacts", value: counts.ContactCount, icon: <FaAddressBook /> },
+    ];
 
     const charts = [
         {
             title: "Total Counts",
             component: (
                 <BarChart data={chartData}>
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip cursor={{ fill: "rgba(0,0,0,0.1)" }} />
+                    <XAxis dataKey="name" stroke="#888" />
+                    <YAxis stroke="#888" />
+                    <Tooltip cursor={{ fill: "rgba(123, 47, 247, 0.06)" }} />
                     <Legend />
-                    <Bar dataKey="total" fill="#007bff" barSize={50} radius={[10, 10, 0, 0]} />
+                    <Bar dataKey="total" fill="#7b2ff7" barSize={50} radius={[10, 10, 0, 0]} />
                 </BarChart>
             ),
         },
@@ -139,11 +61,11 @@ const Graph = () => {
             title: "Trend Over Time",
             component: (
                 <LineChart data={chartData}>
-                    <XAxis dataKey="name" />
-                    <YAxis />
+                    <XAxis dataKey="name" stroke="#888" />
+                    <YAxis stroke="#888" />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="total" stroke="#28a745" strokeWidth={3} />
+                    <Line type="monotone" dataKey="total" stroke="#7b2ff7" strokeWidth={3} dot={{ r: 5 }} />
                 </LineChart>
             ),
         },
@@ -154,7 +76,7 @@ const Graph = () => {
                     <PolarGrid />
                     <PolarAngleAxis dataKey="name" />
                     <PolarRadiusAxis />
-                    <Radar dataKey="total" stroke="#ffc107" fill="#ffc107" fillOpacity={0.6} />
+                    <Radar dataKey="total" stroke="#a855f7" fill="#a855f7" fillOpacity={0.5} />
                     <Tooltip />
                 </RadarChart>
             ),
@@ -171,22 +93,55 @@ const Graph = () => {
 
     return (
         <div className="graph-container">
-            <Link className="btn btn-dark" to="/admin">back</Link>
-            <h3 className="graph-title">Dashboard Overview</h3>
+            <div className="graph-header">
+                <Link className="btn graph-back-btn" to="/admin">
+                    <FaArrowLeft /> Back
+                </Link>
+                <h3 className="graph-title">
+                    <FaChartLine className="graph-title-icon" /> Dashboard Overview
+                </h3>
+                <div style={{ width: "90px" }}></div>
+            </div>
 
-            <div className="graph-chart-navigation">
-                <div className="row d-flex justify-content-between mb-2" >
+            <div className="graph-stats-row">
+                {statCards.map((card, i) => (
+                    <div className="graph-stat-card" key={card.label}>
+                        <div className="graph-stat-icon" style={{ background: COLORS[i] }}>
+                            {card.icon}
+                        </div>
+                        <div>
+                            <p className="graph-stat-value">{card.value}</p>
+                            <p className="graph-stat-label">{card.label}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
-                    <button className="btn btn-primary col-1 " onClick={handlePrev}>&larr;</button>
-                    <button className="btn btn-primary col-1 ms-3 " onClick={handleNext}>&rarr;</button>
-                </div>
-                <div className="chart-wrapper">
+            <div className="chart-wrapper">
+                <div className="chart-nav-header">
+                    <button className="chart-nav-btn" onClick={handlePrev} aria-label="Previous chart">
+                        <FaChevronLeft />
+                    </button>
                     <h4 className="chart-heading">{charts[currentChart].title}</h4>
-                    <ResponsiveContainer width="100%" height={300}>
-                        {charts[currentChart].component}
-                    </ResponsiveContainer>
+                    <button className="chart-nav-btn" onClick={handleNext} aria-label="Next chart">
+                        <FaChevronRight />
+                    </button>
                 </div>
 
+                <ResponsiveContainer width="100%" height={300}>
+                    {charts[currentChart].component}
+                </ResponsiveContainer>
+
+                <div className="chart-dots">
+                    {charts.map((chart, i) => (
+                        <button
+                            key={chart.title}
+                            className={`chart-dot ${i === currentChart ? "active" : ""}`}
+                            onClick={() => setCurrentChart(i)}
+                            aria-label={`Show ${chart.title}`}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

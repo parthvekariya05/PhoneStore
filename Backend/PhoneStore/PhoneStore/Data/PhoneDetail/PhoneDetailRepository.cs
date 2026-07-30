@@ -291,5 +291,6 @@ namespace PhoneStore.Data.PhoneDetail
             return billcount;
         }
         #endregion
+
     }
 }
